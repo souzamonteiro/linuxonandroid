@@ -1,2 +1,2 @@
-# linuxonandroid
-Linux distribution for Android
+# Linux on Android
+Linux distribution for Android.
