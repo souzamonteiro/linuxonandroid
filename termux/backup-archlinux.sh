@@ -1,3 +1,5 @@
 #!/bin/sh
 
-tar czf archlinux.tar.gz /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/archlinux
+cd /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/
+
+tar czf archlinux.tar.gz archlinux
