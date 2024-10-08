@@ -14,7 +14,7 @@ Enable access to device storage:
 termux-setup-storage
 ```
 
-# Install Vim
+## Install Vim
 Install Vim editor:
 ```
 pkg install vim -y
