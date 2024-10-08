@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=1.0
+Name=Firefox
+GenericName=Firefox
+Exec=/home/user/bin/firefox-virgl.sh
+Terminal=false
+Icon=/usr/share/firefox-esr/browser/chrome/icons/default/default48.png
+Type=Application
+Categories=Application;Network;
+Comment=Web browser
+StartupNotify=false
