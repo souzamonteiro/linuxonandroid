@@ -55,7 +55,7 @@ proot-distro install debian
 ```
 
 ## Login
-Do the first login:
+Login into system:
 ```
 proot-distro login debian --user root --shared-tmp
 ```
