@@ -34,10 +34,10 @@ passwd user
 # `user ALL=(ALL:ALL) ALL`
 # To insert the line press key `[i]`, type the code and press keys `[ESC]`, `[:]`, `[w]`, `[q]` and `[ENTER]`, to save the file.
 
-# Setup the locale, language, time zone and chaset, (for example America/Bahia).
+# Setup the locale, language, time zone and charset, (for example America/Bahia).
 ln -sf /usr/share/zoneinfo/America/Bahia /etc/localtime
 
-# Edit /etc/locale.gen to setup your charset.
+# Edit `/etc/locale.gen` to setup your charset.
 # vim /etc/locale.gen
 # Uncomment your charset, removing the hash character `#` from the start of the line (for example `pt_BR.UTF-8 UTF-8`). To do so, press key `[i]`, uncomment the code and press keys `[ESC]`, `[:]`, `[w]`, `[q]` and `[ENTER]`, to save the file.
 
