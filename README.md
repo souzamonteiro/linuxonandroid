@@ -180,3 +180,108 @@ termux-x11 :0 -ac &
 proot-distro login debian --user user --shared-tmp --no-sysvipc -- bash -c "export DISPLAY=:0 PULSE_SERVER=tcp:127.0.0.1; dbus-launch --exit-with-session startxfce4"
 ```
 
+### Install development tools
+Install *build-essential*, a package that contains tools and headers required to compile packages in Debian:
+```
+sudo apt install build-essential -y
+```
+
+### Install OpenGL tools
+Install *mesa-utils*, a package that contains tools to test the 3D hardware acceleration:
+```
+sudo apt install mesa-utils -y
+```
+
+### Install productivity tools
+Install *Gimp*, *Inkscape*, *Scribus*, *LibreOffice*, *LibreCAD* and *Calibre*:
+```
+sudo apt install gimp inkscape scribus libreoffice librecad calibre -y
+```
+
+### Setup Firefox to use 3D hardware acceleration
+Create a directory `bin` in the user `home` directory:
+```
+cd ~
+mkdir bin
+```
+Create an script to run Firefox usin VirGL:
+```
+vim ~/bin/firefox-virgl.sh
+```
+Type the following code inside the script:
+```
+#!/bin/sh
+
+GALLIUM_DRIVER=virpipe MESA_GL_VERSION_OVERRIDE=4.6COMPAT MESA_GLES_VERSION_OVERRIDE=3.2 firefox
+```
+Press keys `[ESC]`, `[:]`, `[w]`, `[q]` and `[ENTER]`, to save the file.
+Give execution permission to the file:
+```
+chmod 755 ~/bin/firefox-virgl.sh
+```
+
+Create an script to launch Firefox from the desktop:
+```
+vim ~/Desktop/Firefox.desktop
+```
+Type the following code inside the script:
+```
+[Desktop Entry]
+Encoding=UTF-8
+Version=1.0
+Name=Firefox
+GenericName=Firefox
+Exec=/home/user/bin/firefox-virgl.sh
+Terminal=false
+Icon=/usr/share/firefox-esr/browser/chrome/icons/default/default48.png
+Type=Application
+Categories=Application;Network;
+Comment=Web browser
+StartupNotify=false
+```
+Press keys `[ESC]`, `[:]`, `[w]`, `[q]` and `[ENTER]`, to save the file.
+Give execution permission to the file:
+```
+chmod 755 ~/Desktop/Firefox.desktop
+```
+Right-click on the Firefox.desktop file on your desktop and give it execution permission.
+
+### Setup Termux Widget
+Right-click on the Android desktop and add the Termux Widget.
+
+Launch Termux and create a directory `.shortcuts` in the Termux `home` directory:
+```
+mkdir .shortcuts
+```
+Create an script to launch Debian from the Termux Widget:
+```
+vim .shortcuts/Debian.sh
+```
+Type the following code inside the script:
+```
+export DISPLAY=:0
+export XDG_RUNTIME_DIR=${TMPDIR}
+
+am start --user 0 -n com.termux.x11/com.termux.x11.MainActivity
+
+sleep 3
+
+killall -9 termux-x11 virgl_test_server_android pulseaudio
+
+pulseaudio --start --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1" --exit-idle-time=-1
+pacmd load-module module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1
+
+virgl_test_server_android --angle-vulkan &
+#virgl_test_server_android --angle-gl &
+#virgl_test_server_android &
+
+termux-x11 :0 -ac &
+
+proot-distro login debian --user user --shared-tmp --no-sysvipc -- bash -c "export DISPLAY=:0 PULSE_SERVER=tcp:127.0.0.1; dbus-launch --exit-with-session startxfce4"
+```
+Press keys `[ESC]`, `[:]`, `[w]`, `[q]` and `[ENTER]`, to save the file.
+Give execution permission to the file:
+```
+chmod 755 .shortcuts/Debian.sh
+```
+Launch Debian tapping the label `Debian.sh` in tbe Termux Widget.
