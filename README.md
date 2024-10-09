@@ -215,6 +215,7 @@ Type the following code inside the script:
 GALLIUM_DRIVER=virpipe MESA_GL_VERSION_OVERRIDE=4.6COMPAT MESA_GLES_VERSION_OVERRIDE=3.2 firefox
 ```
 Press keys `[ESC]`, `[:]`, `[w]`, `[q]` and `[ENTER]`, to save the file.
+
 Give execution permission to the file:
 ```
 chmod 755 ~/bin/firefox-virgl.sh
@@ -240,6 +241,7 @@ Comment=Web browser
 StartupNotify=false
 ```
 Press keys `[ESC]`, `[:]`, `[w]`, `[q]` and `[ENTER]`, to save the file.
+
 Give execution permission to the file:
 ```
 chmod 755 ~/Desktop/Firefox.desktop
@@ -280,6 +282,7 @@ termux-x11 :0 -ac &
 proot-distro login debian --user user --shared-tmp --no-sysvipc -- bash -c "export DISPLAY=:0 PULSE_SERVER=tcp:127.0.0.1; dbus-launch --exit-with-session startxfce4"
 ```
 Press keys `[ESC]`, `[:]`, `[w]`, `[q]` and `[ENTER]`, to save the file.
+
 Give execution permission to the file:
 ```
 chmod 755 .shortcuts/Debian.sh
