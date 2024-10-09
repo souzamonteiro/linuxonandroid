@@ -92,8 +92,6 @@ Login into system:
 proot-distro login debian --user root --shared-tmp
 ```
 
-### Setup Debian Linux
-
 ### Update system packages list
 Update the Debian packages list:
 ```
