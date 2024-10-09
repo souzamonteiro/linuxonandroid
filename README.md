@@ -4,6 +4,19 @@ Linux distribution for Android.
 ## Install Termux
 Install Termux, Termux-X11 and Termux Widget
 
+### Setup Android
+Android has a mechanism that monitors and kills forked child processes started by apps, the phantom process killer (PPF). You must disable it to run Linux processes in Termux, or they will crash frequently.
+
+To disable the phantom process killer, toggle *Settings-> Developer options -> Disable child process restrictions*. However, *Developer options* are not visible by default. To display them, go to *Settings -> About device -> Software information* and tap on *Build number* seven times.
+
+This is not permanent. To make the changes permanent, install the Android SDK and run the following commands in a terminal, with your device connected to your computer using a USB cable:
+```
+$ADB_PATH/adb shell "/system/bin/device_config set_sync_disabled_for_tests persistent"
+$ADB_PATH/adb shell "/system/bin/device_config put activity_manager max_phantom_processes 2147483647"
+$ADB_PATH/adb shell "/system/bin/settings put global settings_enable_monitor_phantom_procs false"
+```
+Where `ADB_PATH` is set to the path of your Android SDK platform tools. Enable *USB debugging* in *Developer options* before run the `adb` command.
+
 ### Install Termux
 Download Termux from GitHub: [https://github.com/termux/termux-app/releases/download/v0.118.1/termux-app_v0.118.1+github-debug_arm64-v8a.apk]
 
