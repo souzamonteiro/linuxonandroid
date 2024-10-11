@@ -132,7 +132,7 @@ useradd -m -g users -G audio,storage,sudo,wheel,video -s /bin/bash user
 passwd user
 ```
 
-Add the new user to `/etc/sudoers`, running `visudo` and inserting the following line just after `root ALL=(ALL:ALL) ALL`:
+Instead of adding the user to the sudo group, you can add it directly to the sudoers user list. To add the new user to `/etc/sudoers`, run `visudo` and insert the following line just after `root ALL=(ALL:ALL) ALL`:
 ```
 user ALL=(ALL:ALL) ALL
 ```
