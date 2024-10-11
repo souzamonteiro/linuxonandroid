@@ -124,12 +124,11 @@ Add some needed groups:
 ```
 groupadd storage
 groupadd wheel
-groupadd video
 ```
 
 Create a regular user:
 ```
-useradd -m -g users -G audio,storage,wheel,video -s /bin/bash user
+useradd -m -g users -G audio,storage,sudo,wheel,video -s /bin/bash user
 passwd user
 ```
 
