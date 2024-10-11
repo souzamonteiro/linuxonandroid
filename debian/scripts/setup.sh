@@ -46,7 +46,9 @@ ln -sf /usr/share/zoneinfo/America/Bahia /etc/localtime
 # Edit `/etc/locale.gen` to setup your charset.
 # vim /etc/locale.gen
 # Uncomment your charset, removing the hash character `#` from the start of the line (for example `pt_BR.UTF-8 UTF-8`). To do so, press key `[i]`, uncomment the code and press keys `[ESC]`, `[:]`, `[w]`, `[q]` and `[ENTER]`, to save the file.
+sed -i -E 's/#[[:space:]]?(pt_BR.UTF-8[[:space:]]+UTF-8)/\1/g' /etc/locale.gen
 
 # Genarate the locales and setup your language.
 locale-gen
-echo "LANG=en_US.UTF-8" > /etc/locale.conf
+#echo "LANG=en_US.UTF-8" > /etc/locale.conf
+echo "LANG=pt_BR.UTF-8" > /etc/locale.conf
