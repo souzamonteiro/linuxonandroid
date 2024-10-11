@@ -152,7 +152,7 @@ Uncomment your charset, removing the hash character `#` from the start of the li
 Genarate the locales and setup your language:
 ```
 locale-gen
-echo "LANG=en_US.UTF-8" > /etc/locale.conf
+echo "LANG=pt_BR.UTF-8" > /etc/locale.conf
 ```
 
 ### Exit system
