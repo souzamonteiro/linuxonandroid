@@ -36,9 +36,8 @@ groupadd wheel
 useradd -m -g users -G audio,storage,sudo,wheel,video -s /bin/bash user
 echo -e "user\nuser"| passwd user
 
-# Add the new user to `/etc/sudoers`, running `visudo` and inserting the following line just after `root ALL=(ALL:ALL) ALL`:
-# `user ALL=(ALL:ALL) ALL`
-# To insert the line press key `[i]`, type the code and press keys `[ESC]`, `[:]`, `[w]`, `[q]` and `[ENTER]`, to save the file.
+# Add the new user to `/etc/sudoers`.
+echo "user ALL=(ALL:ALL) ALL" >> /etc/sudoers
 
 # Setup the locale, language, time zone and charset, (for example America/Bahia).
 ln -sf /usr/share/zoneinfo/America/Bahia /etc/localtime
