@@ -14,6 +14,15 @@ apt install xfce4 xfce4-goodies dbus-x11 -y
 # Install locales.
 apt install locales fonts-noto-cjk -y
 
+# Install development tools.
+apt install build-essential -y
+
+# Install OpenGL tools.
+apt install mesa-utils -y
+
+# Install productivity tools.
+apt install gimp inkscape scribus libreoffice librecad calibre -y
+
 # Setup system.
 
 # Setup root password.
