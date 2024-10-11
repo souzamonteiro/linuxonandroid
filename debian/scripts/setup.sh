@@ -26,7 +26,7 @@ apt install gimp inkscape scribus libreoffice librecad calibre -y
 # Setup system.
 
 # Setup root password.
-echo "root" | passwd
+echo -e "root\nroot"| passwd
 
 # Add some needed groups.
 groupadd storage
@@ -34,7 +34,7 @@ groupadd wheel
 
 # Create a regular user.
 useradd -m -g users -G audio,storage,sudo,wheel,video -s /bin/bash user
-echo "user" | passwd user
+echo -e "user\nuser"| passwd user
 
 # Add the new user to `/etc/sudoers`, running `visudo` and inserting the following line just after `root ALL=(ALL:ALL) ALL`:
 # `user ALL=(ALL:ALL) ALL`
