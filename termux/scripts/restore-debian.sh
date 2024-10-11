@@ -1,7 +1,6 @@
 #/bin/sh
 
-chmod -R 777 /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/debian
+proot-distro remove debian
 
-rm -rf /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/debian
+proot-distro restore debian.tar.gz
 
-tar xzf debian.tar.gz -C /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/

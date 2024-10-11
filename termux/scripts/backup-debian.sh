@@ -1,7 +1,6 @@
 #!/bin/sh
 
-PWD=`pwd`
+rm debian.tar.gz
 
-cd /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/
+proot-distro backup debian --output debian.tar.gz
 
-tar czf $PWD/debian.tar.gz debian
