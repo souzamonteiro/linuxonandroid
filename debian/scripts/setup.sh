@@ -17,18 +17,15 @@ apt install locales fonts-noto-cjk -y
 # Setup system.
 
 # Setup root password.
-echo "Setup root password:"
-passwd
+echo "root" | passwd
 
 # Add some needed groups.
 groupadd storage
 groupadd wheel
-groupadd video
 
 # Create a regular user.
-useradd -m -g users -G audio,storage,wheel,video -s /bin/bash user
-echo "Setup user password:"
-passwd user
+useradd -m -g users -G audio,storage,sudo,wheel,video -s /bin/bash user
+echo "user" | passwd user
 
 # Add the new user to `/etc/sudoers`, running `visudo` and inserting the following line just after `root ALL=(ALL:ALL) ALL`:
 # `user ALL=(ALL:ALL) ALL`
