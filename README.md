@@ -325,7 +325,7 @@ sudo apt install box64-android
 
 Install Wine in `/opt` directory:
 ```
-sudo cd /opt
+cd /opt
 ```
 
 Download Wine:
@@ -409,7 +409,7 @@ cd ~/Desktop
 echo '[Desktop Entry]
 Name=Wine32 Explorer
 Exec=bash -c "wine explorer"
-icon=wine
+Icon=system-file-manager
 Type=Application' > ~/Desktop/Wine32.desktop
 chmod 755 ~/Desktop/Wine32.desktop
 sudo cp ~/Desktop/Wine32.desktop /usr/share/applications/
@@ -417,7 +417,7 @@ sudo cp ~/Desktop/Wine32.desktop /usr/share/applications/
 echo '[Desktop Entry]
 Name=Wine64 Explorer
 Exec=bash -c "wine64 explorer"
-icon=wine
+Icon=system-file-manager
 Type=Application' > ~/Desktop/Wine64.desktop
 chmod 755 ~/Desktop/Wine64.desktop
 sudo cp ~/Desktop/Wine64.desktop /usr/share/applications/
