@@ -25,7 +25,7 @@ sudo apt install box64-android
 # Install Wine.
 
 # Install Wine in `/opt` directory.
-sudo cd /opt
+cd /opt
 
 # Download Wine.
 sudo wget https://github.com/Kron4ek/Wine-Builds/releases/download/9.7/wine-9.7-amd64.tar.xz
