@@ -123,10 +123,10 @@ mv winetricks /usr/local/bin/
 sudo echo '#!/bin/bash
 export BOX86_NOBANNER=1 WINE=wine WINEPREFIX=~/.wine32 WINESERVER=/opt/wine/bin/wineserver
 wine '"/usr/local/bin/winetricks "'"$@"' > /usr/local/bin/winetricks32
-chmod +x /usr/local/bin/winetricks32
+chmod 755 /usr/local/bin/winetricks32
 
 sudo echo '#!/bin/bash
 export BOX64_NOBANNER=1 WINE=wine64 WINEPREFIX=~/.wine64 WINESERVER=/opt/wine64/bin/wineserver
 wine64 '"/usr/local/bin/winetricks "'"$@"' > /usr/local/bin/winetricks64
-chmod +x /usr/local/bin/winetricks64
+chmod 755 /usr/local/bin/winetricks64
 
