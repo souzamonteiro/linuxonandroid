@@ -361,6 +361,16 @@ Unpack DXVK:
 tar xvf dxvk-2.3.1.tar.gz
 ```
 
+### Create an script to setup DXVK
+Create an script to setup DXVK for each new user.
+```
+sudo echo '#!/bin/bash
+cp /opt/dxvk-2.3.1/x32/* ~/.wine32/drive_c/windows/system32
+cp /opt/dxvk-2.3.1/x32/* ~/.wine64/drive_c/windows/system32
+cp /opt/dxvk-2.3.1/x64/* ~/.wine64/drive_c/windows/syswow64' > /usr/local/bin/setup_dxvk.sh
+sudo chmod +x /usr/local/bin/setup_dxvk.sh
+```
+
 ### Create scripts to run Wine
 Create scripts to run Wine under Box86 and Box64:
 ```
@@ -422,7 +432,5 @@ wine64 wineboot
 
 Setup DXVK:
 ```
-cp /opt/dxvk-2.3.1/x32/* ~/.wine32/drive_c/windows/system32
-cp /opt/dxvk-2.3.1/x32/* ~/.wine64/drive_c/windows/system32
-cp /opt/dxvk-2.3.1/x64/* ~/.wine64/drive_c/windows/syswow64
+setup_dxvk.sh
 ```
