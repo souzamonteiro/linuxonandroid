@@ -31,3 +31,43 @@ sudo cd /opt
 sudo wget https://github.com/Kron4ek/Wine-Builds/releases/download/9.7/wine-9.7-amd64.tar.xz
 sudo wget https://github.com/Kron4ek/Wine-Builds/releases/download/9.7/wine-9.7-x86.tar.xz
 
+# Unpack Wine.
+sudo tar xvf wine-9.7-amd64.tar.xz
+sudo tar xvf wine-9.7-x86.tar.xz
+
+sudo mv wine-9.7-amd64 wine64
+sudo mv wine-9.7-x86 wine
+
+# Install DXVK a Vulkan-based translation layer for Direct3D 9/10/11.
+
+# Install DXVK dependencies.
+sudo apt install mesa-vulkan-drivers mesa-vulkan-drivers:armhf libvulkan1 libvulkan1:armhf
+
+# Download DXVK.
+wget https://github.com/doitsujin/dxvk/releases/download/v2.3.1/dxvk-2.3.1.tar.gz
+
+# Unpack DXVK.
+tar xvf dxvk-2.3.1.tar.gz
+
+# Create scripts to run Wine under box86 and box64.
+
+echo '#!/bin/bash
+export DISPLAY=:0
+export BOX86_PATH=/opt/wine/bin/
+export BOX86_LD_LIBRARY_PATH=/opt/wine/lib/wine/i386-unix/:/lib/i386-linux-gnu/:/lib/aarch64-linux-gnu/:/lib/arm-linux-gnueabihf/:/usr/lib/aarch64-linux-gnu/:/usr/lib/arm-linux-gnueabihf/:/usr/lib/i386-linux-gnu/
+export WINEPREFIX=~/.wine32
+
+box86 /opt/wine/bin/wine "$@"' > /usr/local/bin/wine
+chmod +x /usr/local/bin/wine
+
+echo '#!/bin/bash
+export DISPLAY=:0
+export BOX64_PATH=/opt/wine64/bin/
+export BOX64_LD_LIBRARY_PATH=/opt/wine64/lib/i386-unix/:/opt/wine64/lib/wine/x86_64-unix/:/lib/i386-linux-gnu/:/lib/x86_64-linux-gnu:/lib/aarch64-linux-gnu/:/lib/arm-linux-gnueabihf/:/usr/lib/aarch64-linux-gnu/:/usr/lib/arm-linux-gnueabihf/:/usr/lib/i386-linux-gnu/:/usr/lib/x86_64-linux-gnu/
+export WINEPREFIX=~/.wine64
+
+box64 /opt/wine64/bin/wine64 "$@"' > /usr/local/bin/wine64
+chmod +x /usr/local/bin/wine64
+
+
+
