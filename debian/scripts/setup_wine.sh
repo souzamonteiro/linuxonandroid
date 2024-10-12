@@ -51,7 +51,7 @@ tar xvf dxvk-2.3.1.tar.gz
 
 # Create scripts to run Wine under box86 and box64.
 
-echo '#!/bin/bash
+sudo echo '#!/bin/bash
 export DISPLAY=:0
 export GALLIUM_DRIVER=virpipe
 export MESA_GL_VERSION_OVERRIDE=4.6COMPAT
@@ -62,9 +62,9 @@ export BOX86_LD_LIBRARY_PATH=/opt/wine/lib/wine/i386-unix/:/lib/i386-linux-gnu/:
 export WINEPREFIX=~/.wine32
 
 box86 /opt/wine/bin/wine "$@"' > /usr/local/bin/wine
-chmod +x /usr/local/bin/wine
+sudo chmod +x /usr/local/bin/wine
 
-echo '#!/bin/bash
+sodo echo '#!/bin/bash
 export DISPLAY=:0
 export GALLIUM_DRIVER=virpipe
 export MESA_GL_VERSION_OVERRIDE=4.6COMPAT
@@ -75,7 +75,32 @@ export BOX64_LD_LIBRARY_PATH=/opt/wine64/lib/i386-unix/:/opt/wine64/lib/wine/x86
 export WINEPREFIX=~/.wine64
 
 box64 /opt/wine64/bin/wine64 "$@"' > /usr/local/bin/wine64
-chmod +x /usr/local/bin/wine64
+sudo chmod +x /usr/local/bin/wine64
 
+# Create shortcuts to the Wine File Manager on the Xfce desktop.
+cd ~/Desktop
 
+echo '[Desktop Entry]
+Name=Wine32 Explorer
+Exec=bash -c "wine explorer"
+icon=wine
+Type=Application' > ~/Desktop/Wine32.desktop
+chmod 755 ~/Desktop/Wine32.desktop
+sudo cp ~/Desktop/Wine32.desktop /usr/share/applications/
 
+echo '[Desktop Entry]
+Name=Wine64 Explorer
+Exec=bash -c "wine64 explorer"
+icon=wine
+Type=Application' > ~/Desktop/Wine64.desktop
+chmod 755 ~/Desktop/Wine64.desktop
+sudo cp ~/Desktop/Wine64.desktop /usr/share/applications/
+
+# Setup Wine.
+wine wineboot
+wine64 wineboot
+
+# Setup DXVK.
+cp /opt/dxvk-2.3.1/x32/* ~/.wine32/drive_c/windows/system32
+cp /opt/dxvk-2.3.1/x32/* ~/.wine64/drive_c/windows/system32
+cp /opt/dxvk-2.3.1/x64/* ~/.wine64/drive_c/windows/syswow64
