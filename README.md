@@ -287,9 +287,9 @@ chmod 755 .shortcuts/Debian.sh
 Launch Debian tapping the label `Debian.sh` in tbe Termux Widget.
 
 ## Install Win32 and Win64 support
-It is possible run Windows programs on Android Android tablet using Box86, Box64 and Wine.
+It is possible run Windows programs on an Android tablet using Box86, Box64 and Wine.
 
-### Install box86 and box64
+### Install Box86 and Box64
 
 Add ARMHF support, "ARM hard float", a Debian port for ARM processors that have hardware floating point support:
 ```
@@ -301,7 +301,7 @@ Install some required tools:
 sudo apt install wget gpg
 ```
 
-Add box86 and box64 Debian repository:
+Add Box86 and Box64 Debian repository:
 ```
 sudo wget https://ryanfortner.github.io/box86-debs/box86.list -O /etc/apt/sources.list.d/box86.list
 wget -qO- https://ryanfortner.github.io/box86-debs/KEY.gpg | sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/box86-debs-archive-keyring.gpg
@@ -315,7 +315,7 @@ Update apt-get packages list:
 sudo apt update
 ```
 
-Install box86 and box64:
+Install Box86 and Box64:
 ```
 sudo apt install box86-android
 sudo apt install box64-android
@@ -343,7 +343,9 @@ sudo mv wine-9.7-amd64 wine64
 sudo mv wine-9.7-x86 wine
 ```
 
-### Install DXVK a Vulkan-based translation layer for Direct3D 9/10/11
+### Install DXVK
+DXVK is a Vulkan-based translation layer for Direct3D 9/10/11.
+
 Install DXVK dependencies:
 ```
 sudo apt install mesa-vulkan-drivers mesa-vulkan-drivers:armhf libvulkan1 libvulkan1:armhf
@@ -360,7 +362,7 @@ tar xvf dxvk-2.3.1.tar.gz
 ```
 
 ### Create scripts to run Wine
-Create scripts to run Wine under box86 and box64:
+Create scripts to run Wine under Box86 and Box64:
 ```
 sudo echo '#!/bin/bash
 export DISPLAY=:0
