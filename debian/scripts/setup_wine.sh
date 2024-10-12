@@ -3,10 +3,10 @@
 # Install box86 and box64.
 
 # Add ARMHF support, "ARM hard float", a Debian port for ARM processors that have hardware floating point support.
-sudo dpkg --add-architecture armhf
+sudo dpkg --add-architecture armhf -y
 
 # Install some required tools.
-sudo apt install wget gpg
+sudo apt install wget gpg -y
 
 # Add box86 and box64 Debian repository.
 sudo wget https://ryanfortner.github.io/box86-debs/box86.list -O /etc/apt/sources.list.d/box86.list
@@ -16,11 +16,11 @@ sudo wget https://ryanfortner.github.io/box64-debs/box64.list -O /etc/apt/source
 wget -qO- https://ryanfortner.github.io/box64-debs/KEY.gpg | sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/box64-debs-archive-keyring.gpg
 
 # Update apt-get packages list.
-sudo apt update
+sudo apt update -y
 
 # Install box86 and box64.
-sudo apt install box86-android
-sudo apt install box64-android
+sudo apt install box86-android -y
+sudo apt install box64-android -y
 
 # Install Wine.
 
@@ -41,7 +41,7 @@ sudo mv wine-9.7-x86 wine
 # Install DXVK a Vulkan-based translation layer for Direct3D 9/10/11.
 
 # Install DXVK dependencies.
-sudo apt install mesa-vulkan-drivers mesa-vulkan-drivers:armhf libvulkan1 libvulkan1:armhf
+sudo apt install mesa-vulkan-drivers mesa-vulkan-drivers:armhf libvulkan1 libvulkan1:armhf -y
 
 # Download DXVK.
 wget https://github.com/doitsujin/dxvk/releases/download/v2.3.1/dxvk-2.3.1.tar.gz
