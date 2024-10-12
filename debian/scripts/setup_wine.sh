@@ -1,4 +1,4 @@
-#!/bin/sh
+.\#!/bin/sh
 
 # Install box86 and box64.
 
@@ -48,6 +48,14 @@ wget https://github.com/doitsujin/dxvk/releases/download/v2.3.1/dxvk-2.3.1.tar.g
 
 # Unpack DXVK.
 tar xvf dxvk-2.3.1.tar.gz
+
+# Create an script to setup DXVK.
+
+sudo echo '#!/bin/bash
+cp /opt/dxvk-2.3.1/x32/* ~/.wine32/drive_c/windows/system32
+cp /opt/dxvk-2.3.1/x32/* ~/.wine64/drive_c/windows/system32
+cp /opt/dxvk-2.3.1/x64/* ~/.wine64/drive_c/windows/syswow64' > /usr/local/bin/setup_dxvk.sh
+sudo chmod +x /usr/local/bin/setup_dxvk.sh
 
 # Create scripts to run Wine under box86 and box64.
 
@@ -101,6 +109,4 @@ wine wineboot
 wine64 wineboot
 
 # Setup DXVK.
-cp /opt/dxvk-2.3.1/x32/* ~/.wine32/drive_c/windows/system32
-cp /opt/dxvk-2.3.1/x32/* ~/.wine64/drive_c/windows/system32
-cp /opt/dxvk-2.3.1/x64/* ~/.wine64/drive_c/windows/syswow64
+setup_dxvk.sh
