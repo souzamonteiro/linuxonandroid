@@ -53,6 +53,10 @@ tar xvf dxvk-2.3.1.tar.gz
 
 echo '#!/bin/bash
 export DISPLAY=:0
+export GALLIUM_DRIVER=virpipe
+export MESA_GL_VERSION_OVERRIDE=4.6COMPAT
+export MESA_GLES_VERSION_OVERRIDE=3.2
+
 export BOX86_PATH=/opt/wine/bin/
 export BOX86_LD_LIBRARY_PATH=/opt/wine/lib/wine/i386-unix/:/lib/i386-linux-gnu/:/lib/aarch64-linux-gnu/:/lib/arm-linux-gnueabihf/:/usr/lib/aarch64-linux-gnu/:/usr/lib/arm-linux-gnueabihf/:/usr/lib/i386-linux-gnu/
 export WINEPREFIX=~/.wine32
@@ -62,6 +66,10 @@ chmod +x /usr/local/bin/wine
 
 echo '#!/bin/bash
 export DISPLAY=:0
+export GALLIUM_DRIVER=virpipe
+export MESA_GL_VERSION_OVERRIDE=4.6COMPAT
+export MESA_GLES_VERSION_OVERRIDE=3.2
+
 export BOX64_PATH=/opt/wine64/bin/
 export BOX64_LD_LIBRARY_PATH=/opt/wine64/lib/i386-unix/:/opt/wine64/lib/wine/x86_64-unix/:/lib/i386-linux-gnu/:/lib/x86_64-linux-gnu:/lib/aarch64-linux-gnu/:/lib/arm-linux-gnueabihf/:/usr/lib/aarch64-linux-gnu/:/usr/lib/arm-linux-gnueabihf/:/usr/lib/i386-linux-gnu/:/usr/lib/x86_64-linux-gnu/
 export WINEPREFIX=~/.wine64
