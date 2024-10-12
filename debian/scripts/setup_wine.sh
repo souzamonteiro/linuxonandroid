@@ -55,7 +55,7 @@ sudo echo '#!/bin/bash
 cp /opt/dxvk-2.3.1/x32/* ~/.wine32/drive_c/windows/system32
 cp /opt/dxvk-2.3.1/x32/* ~/.wine64/drive_c/windows/system32
 cp /opt/dxvk-2.3.1/x64/* ~/.wine64/drive_c/windows/syswow64' > /usr/local/bin/setup_dxvk.sh
-sudo chmod +x /usr/local/bin/setup_dxvk.sh
+sudo chmod 755 /usr/local/bin/setup_dxvk.sh
 
 # Create scripts to run Wine under box86 and box64.
 
@@ -70,9 +70,9 @@ export BOX86_LD_LIBRARY_PATH=/opt/wine/lib/wine/i386-unix/:/lib/i386-linux-gnu/:
 export WINEPREFIX=~/.wine32
 
 box86 /opt/wine/bin/wine "$@"' > /usr/local/bin/wine
-sudo chmod +x /usr/local/bin/wine
+sudo chmod 755 /usr/local/bin/wine
 
-sodo echo '#!/bin/bash
+sudo echo '#!/bin/bash
 export DISPLAY=:0
 export GALLIUM_DRIVER=virpipe
 export MESA_GL_VERSION_OVERRIDE=4.6COMPAT
@@ -83,7 +83,7 @@ export BOX64_LD_LIBRARY_PATH=/opt/wine64/lib/i386-unix/:/opt/wine64/lib/wine/x86
 export WINEPREFIX=~/.wine64
 
 box64 /opt/wine64/bin/wine64 "$@"' > /usr/local/bin/wine64
-sudo chmod +x /usr/local/bin/wine64
+sudo chmod 755 /usr/local/bin/wine64
 
 # Create shortcuts to the Wine File Manager on the Xfce desktop.
 cd ~/Desktop
