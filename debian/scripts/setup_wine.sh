@@ -1,4 +1,4 @@
-.\#!/bin/sh
+#!/bin/sh
 
 # Install box86 and box64.
 
