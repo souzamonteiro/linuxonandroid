@@ -24,11 +24,11 @@ sudo apt install box64-android -y
 cd /opt
 
 # Download Wine.
-sudo wget https://github.com/Kron4ek/Wine-Builds/releases/download/9.7/wine-9.7-amd64.tar.xz
+sudo wget https://github.com/Kron4ek/Wine-Builds/releases/download/9.19/wine-9.19-amd64-wow64.tar.xz
 
 # Unpack Wine.
-sudo tar xvf wine-9.7-amd64.tar.xz
-sudo mv wine-9.7-amd64 wine64
+sudo tar xvf wine-9.19-amd64-wow64.tar.xz
+sudo mv wine-9.19-amd64-wow64 wine64
 
 # Install DXVK a Vulkan-based translation layer for Direct3D 9/10/11.
 
