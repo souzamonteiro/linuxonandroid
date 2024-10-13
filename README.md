@@ -190,12 +190,12 @@ sudo apt install mesa-utils -y
 ```
 
 ### Install productivity tools
-Install *Gimp*, *Inkscape*, *Scribus*, *LibreOffice*, *LibreCAD* and *Calibre*:
+Install *Gimp*, *Inkscape*, *Scribus*, *LibreOffice*, *LibreCAD*, *Calibre* and *Wings 3D*:
 ```
-sudo apt install gimp inkscape scribus libreoffice librecad calibre -y
+sudo apt install gimp inkscape scribus libreoffice librecad calibre wings3d -y
 ```
 
-### Setup Firefox to use 3D hardware acceleration
+### Setup Firefox and Wings 3D to use 3D hardware acceleration
 Create a directory `bin` in the user `home` directory:
 ```
 cd ~
@@ -217,8 +217,7 @@ Give execution permission to the file:
 ```
 chmod 755 ~/bin/firefox-virgl.sh
 ```
-
-Create an script to launch Firefox from the desktop:
+Create an script to launch Firefox and Wings 3D from the desktop:
 ```
 vim ~/Desktop/Firefox.desktop
 ```
@@ -244,6 +243,49 @@ Give execution permission to the file:
 chmod 755 ~/Desktop/Firefox.desktop
 ```
 Right-click on the Firefox.desktop file on your desktop and give it execution permission.
+
+Create an script to run Wings 3D usin VirGL:
+```
+vim ~/bin/wings3d-virgl.sh
+```
+Type the following code inside the script:
+```
+#!/bin/sh
+
+GALLIUM_DRIVER=virpipe MESA_GL_VERSION_OVERRIDE=4.6COMPAT MESA_GLES_VERSION_OVERRIDE=3.2 wings3d
+```
+Press keys `[ESC]`, `[:]`, `[w]`, `[q]` and `[ENTER]`, to save the file.
+
+Give execution permission to the file:
+```
+chmod 755 ~/bin/wings3d-virgl.sh
+```
+Create an script to launch Wings 3D from the desktop:
+```
+vim ~/Desktop/Wings3D.desktop
+```
+Type the following code inside the script:
+```
+[Desktop Entry]
+Encoding=UTF-8
+Version=1.0
+Name=Wings 3D
+GenericName=Wings 3D
+Exec=/home/user/bin/wings3d-virgl.sh
+Terminal=false
+Icon=/usr/share/firefox-esr/browser/chrome/icons/default/default48.png
+Type=Application
+Categories=Application;Graphic;
+Comment=3D modeling tool
+StartupNotify=false
+```
+Press keys `[ESC]`, `[:]`, `[w]`, `[q]` and `[ENTER]`, to save the file.
+
+Give execution permission to the file:
+```
+chmod 755 ~/Desktop/Wings3D.desktop
+```
+Right-click on the Wings3D.desktop file on your desktop and give it execution permission.
 
 ### Setup Termux Widget
 Right-click on the Android desktop and add the Termux Widget.
