@@ -217,7 +217,7 @@ Give execution permission to the file:
 ```
 chmod 755 ~/bin/firefox-virgl.sh
 ```
-Create an script to launch Firefox and Wings 3D from the desktop:
+Create an script to launch Firefox from the desktop:
 ```
 vim ~/Desktop/Firefox.desktop
 ```
