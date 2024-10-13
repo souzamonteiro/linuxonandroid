@@ -1,11 +1,11 @@
 [Desktop Entry]
 Encoding=UTF-8
 Version=1.0
-Name=Blender
-GenericName=Blender
-Exec=/home/user/bin/blender-virgl.sh
+Name=Wings 3D
+GenericName=Wings 3D
+Exec=/home/user/bin/wings3d-virgl.sh
 Terminal=false
-Icon=blender
+Icon=wings3d
 Type=Application
 Categories=Application;Graphics;
 Comment=3D modeling tool
