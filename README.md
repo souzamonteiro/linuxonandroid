@@ -273,9 +273,9 @@ Name=Wings 3D
 GenericName=Wings 3D
 Exec=/home/user/bin/wings3d-virgl.sh
 Terminal=false
-Icon=/usr/share/firefox-esr/browser/chrome/icons/default/default48.png
+Icon=wings3d
 Type=Application
-Categories=Application;Graphic;
+Categories=Application;Graphics;
 Comment=3D modeling tool
 StartupNotify=false
 ```
