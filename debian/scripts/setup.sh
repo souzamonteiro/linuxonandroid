@@ -21,7 +21,7 @@ apt install build-essential -y
 apt install mesa-utils -y
 
 # Install productivity tools.
-apt install gimp inkscape scribus libreoffice librecad calibre -y
+apt install gimp inkscape scribus libreoffice librecad calibre wings3d -y
 
 # Setup system.
 
