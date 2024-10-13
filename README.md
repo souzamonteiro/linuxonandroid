@@ -301,7 +301,7 @@ Install some required tools:
 sudo apt install wget gpg
 ```
 
-Add Box86 and Box64 Debian repository:
+Add Box64 Debian repository:
 ```
 sudo wget https://ryanfortner.github.io/box64-debs/box64.list -O /etc/apt/sources.list.d/box64.list
 wget -qO- https://ryanfortner.github.io/box64-debs/KEY.gpg | sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/box64-debs-archive-keyring.gpg
@@ -362,8 +362,8 @@ cp /opt/dxvk-2.3.1/x64/* ~/.wine64/drive_c/windows/syswow64' > /usr/local/bin/se
 sudo chmod +x /usr/local/bin/setup_dxvk.sh
 ```
 
-### Create scripts to run Wine
-Create scripts to run Wine under Box64:
+### Create an script to run Wine
+Create an script to run Wine under Box64:
 ```
 sodo echo '#!/bin/bash
 export DISPLAY=:0
@@ -380,7 +380,7 @@ sudo chmod +x /usr/local/bin/wine64
 ```
 
 ### Create shortcuts
-Create shortcuts to the Wine File Manager on the Xfce desktop:
+Create a shortcut to the Wine File Manager on the Xfce desktop:
 ```
 cd ~/Desktop
 
