@@ -201,7 +201,7 @@ Create a directory `bin` in the user `home` directory:
 cd ~
 mkdir bin
 ```
-Create an script to run Firefox usin VirGL:
+Create an script to run Firefox using VirGL:
 ```
 vim ~/bin/firefox-virgl.sh
 ```
@@ -244,7 +244,7 @@ chmod 755 ~/Desktop/Firefox.desktop
 ```
 Right-click on the Firefox.desktop file on your desktop and give it execution permission.
 
-Create an script to run Wings 3D usin VirGL:
+Create an script to run Wings 3D using VirGL:
 ```
 vim ~/bin/wings3d-virgl.sh
 ```
