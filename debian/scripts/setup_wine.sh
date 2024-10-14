@@ -60,6 +60,9 @@ sudo chmod 755 /usr/local/bin/setup_dxvk.sh
 # Create scripts to run Wine under box64.
 sudo echo '#!/bin/bash
 export DISPLAY=:0
+export GALLIUM_DRIVER=virpipe
+export MESA_GL_VERSION_OVERRIDE=4.6COMPAT
+export MESA_GLES_VERSION_OVERRIDE=3.2
 export BOX64_PATH=./:./bin/:$HOME/bin:/opt/wine64/bin/
 export BOX64_LD_LIBRARY_PATH=./:./lib/:$HOME/lib/:/opt/wine64/lib/wine/i386-unix/:/opt/wine64/lib/wine/i386-windows/:/opt/wine64/lib/wine/x86_64-unix/:/opt/wine64/lib/wine/x86_64-windows/:/usr/lib/box64-x86_64-linux-gnu/:/lib/x86_64-linux-gnu/:/usr/lib/x86_64-linux-gnu/:/lib/aarch64-linux-gnu/:/usr/lib/aarch64-linux-gnu/
 export WINEPREFIX=~/.wine64
