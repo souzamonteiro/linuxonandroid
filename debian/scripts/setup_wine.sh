@@ -61,7 +61,7 @@ sudo chmod 755 /usr/local/bin/setup_dxvk.sh
 sudo echo '#!/bin/bash
 export DISPLAY=:0
 export BOX64_PATH=/opt/wine64/bin/
-export BOX64_LD_LIBRARY_PATH=/opt/wine64/lib/i386-unix/:/opt/wine64/lib/i386-windows/:/opt/wine64/lib/wine/x86_64-unix/:/opt/wine64/lib/wine/x86_64-windows/:/lib/aarch64-linux-gnu/:/usr/lib/aarch64-linux-gnu/
+export BOX64_LD_LIBRARY_PATH=./lib:$HOME/lib/:/opt/wine64/lib/wine/i386-unix/:/opt/wine64/lib/wine/i386-windows/:/opt/wine64/lib/wine/x86_64-unix/:/opt/wine64/lib/wine/x86_64-windows/:/usr/lib/box64-x86_64-linux-gnu/:/lib/x86_64-linux-gnu/:/usr/lib/x86_64-linux-gnu/:/lib/aarch64-linux-gnu/:/usr/lib/aarch64-linux-gnu/
 export WINEPREFIX=~/.wine64
 export WINEARCH=win64
 box64 /opt/wine64/bin/wine64 "$@"' > /usr/local/bin/wine64
