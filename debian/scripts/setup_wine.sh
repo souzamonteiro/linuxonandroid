@@ -3,7 +3,7 @@
 # Install box64.
 
 # Add ARMHF support, "ARM hard float", a Debian port for ARM processors that have hardware floating point support.
-sudo dpkg --add-architecture armhf -y
+sudo dpkg --add-architecture armhf
 
 # Install some required tools.
 sudo apt install wget gpg -y
