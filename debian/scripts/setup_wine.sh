@@ -67,8 +67,56 @@ export BOX64_PATH=./:./bin/:$HOME/bin:/opt/wine64/bin/
 export BOX64_LD_LIBRARY_PATH=./:./lib/:$HOME/lib/:/opt/wine64/lib/wine/i386-unix/:/opt/wine64/lib/wine/i386-windows/:/opt/wine64/lib/wine/x86_64-unix/:/opt/wine64/lib/wine/x86_64-windows/:/usr/lib/box64-x86_64-linux-gnu/:/lib/x86_64-linux-gnu/:/usr/lib/x86_64-linux-gnu/:/lib/aarch64-linux-gnu/:/usr/lib/aarch64-linux-gnu/
 export WINEPREFIX=~/.wine64
 export WINEARCH=win64
+box64 /opt/wine64/bin/wine64 "$@"' > /usr/local/bin/wine
+sudo chmod 755 /usr/local/bin/wine
+
+sudo echo '#!/bin/bash
+export DISPLAY=:0
+export GALLIUM_DRIVER=virpipe
+export MESA_GL_VERSION_OVERRIDE=4.6COMPAT
+export MESA_GLES_VERSION_OVERRIDE=3.2
+export BOX64_PATH=./:./bin/:$HOME/bin:/opt/wine64/bin/
+export BOX64_LD_LIBRARY_PATH=./:./lib/:$HOME/lib/:/opt/wine64/lib/wine/i386-unix/:/opt/wine64/lib/wine/i386-windows/:/opt/wine64/lib/wine/x86_64-unix/:/opt/wine64/lib/wine/x86_64-windows/:/usr/lib/box64-x86_64-linux-gnu/:/lib/x86_64-linux-gnu/:/usr/lib/x86_64-linux-gnu/:/lib/aarch64-linux-gnu/:/usr/lib/aarch64-linux-gnu/
+export WINEPREFIX=~/.wine64
+export WINEARCH=win64
 box64 /opt/wine64/bin/wine64 "$@"' > /usr/local/bin/wine64
 sudo chmod 755 /usr/local/bin/wine64
+
+sudo echo '#!/bin/bash
+export DISPLAY=:0
+export GALLIUM_DRIVER=virpipe
+export MESA_GL_VERSION_OVERRIDE=4.6COMPAT
+export MESA_GLES_VERSION_OVERRIDE=3.2
+export BOX64_PATH=./:./bin/:$HOME/bin:/opt/wine64/bin/
+export BOX64_LD_LIBRARY_PATH=./:./lib/:$HOME/lib/:/opt/wine64/lib/wine/i386-unix/:/opt/wine64/lib/wine/i386-windows/:/opt/wine64/lib/wine/x86_64-unix/:/opt/wine64/lib/wine/x86_64-windows/:/usr/lib/box64-x86_64-linux-gnu/:/lib/x86_64-linux-gnu/:/usr/lib/x86_64-linux-gnu/:/lib/aarch64-linux-gnu/:/usr/lib/aarch64-linux-gnu/
+export WINEPREFIX=~/.wine64
+export WINEARCH=win64
+box64 /opt/wine64/bin/wineboot "$@"' > /usr/local/bin/wineboot
+sudo chmod 755 /usr/local/bin/wineboot
+
+sudo echo '#!/bin/bash
+export DISPLAY=:0
+export GALLIUM_DRIVER=virpipe
+export MESA_GL_VERSION_OVERRIDE=4.6COMPAT
+export MESA_GLES_VERSION_OVERRIDE=3.2
+export BOX64_PATH=./:./bin/:$HOME/bin:/opt/wine64/bin/
+export BOX64_LD_LIBRARY_PATH=./:./lib/:$HOME/lib/:/opt/wine64/lib/wine/i386-unix/:/opt/wine64/lib/wine/i386-windows/:/opt/wine64/lib/wine/x86_64-unix/:/opt/wine64/lib/wine/x86_64-windows/:/usr/lib/box64-x86_64-linux-gnu/:/lib/x86_64-linux-gnu/:/usr/lib/x86_64-linux-gnu/:/lib/aarch64-linux-gnu/:/usr/lib/aarch64-linux-gnu/
+export WINEPREFIX=~/.wine64
+export WINEARCH=win64
+box64 /opt/wine64/bin/winecfg "$@"' > /usr/local/bin/winecfg
+sudo chmod 755 /usr/local/bin/winecfg
+
+sudo echo '#!/bin/bash
+export DISPLAY=:0
+export GALLIUM_DRIVER=virpipe
+export MESA_GL_VERSION_OVERRIDE=4.6COMPAT
+export MESA_GLES_VERSION_OVERRIDE=3.2
+export BOX64_PATH=./:./bin/:$HOME/bin:/opt/wine64/bin/
+export BOX64_LD_LIBRARY_PATH=./:./lib/:$HOME/lib/:/opt/wine64/lib/wine/i386-unix/:/opt/wine64/lib/wine/i386-windows/:/opt/wine64/lib/wine/x86_64-unix/:/opt/wine64/lib/wine/x86_64-windows/:/usr/lib/box64-x86_64-linux-gnu/:/lib/x86_64-linux-gnu/:/usr/lib/x86_64-linux-gnu/:/lib/aarch64-linux-gnu/:/usr/lib/aarch64-linux-gnu/
+export WINEPREFIX=~/.wine64
+export WINEARCH=win64
+box64 /opt/wine64/bin/wineserver "$@"' > /usr/local/bin/wineserver
+sudo chmod 755 /usr/local/bin/wineserver
 
 # Create a shortcut to the Wine File Manager on the Xfce desktop.
 cd ~/Desktop
