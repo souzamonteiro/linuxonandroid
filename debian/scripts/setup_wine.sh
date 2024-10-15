@@ -216,6 +216,11 @@ sudo ln -sf /opt/wine64/bin/winemaker /usr/local/bin/winemaker
 sudo ln -sf /opt/wine64/bin/winemine /usr/local/bin/winemine
 sudo ln -sf /opt/wine64/bin/winepath /usr/local/bin/winepath
 
+# Install Winetricks.
+wget https://raw.githubusercontent.com/Winetricks/winetricks/master/src/winetricks
+chmod 755 winetricks
+sudo mv winetricks /usr/local/bin/
+
 # Create a shortcut to the Wine File Manager on the Xfce desktop.
 cd ~/Desktop
 
