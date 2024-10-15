@@ -63,6 +63,7 @@ export DISPLAY=:0
 export GALLIUM_DRIVER=virpipe
 export MESA_GL_VERSION_OVERRIDE=4.6COMPAT
 export MESA_GLES_VERSION_OVERRIDE=3.2
+export BOX86_NOBANNER=1
 export BOX64_PATH=./:./bin/:$HOME/bin:/opt/wine64/bin/
 export BOX64_LD_LIBRARY_PATH=./:./lib/:$HOME/lib/:/opt/wine64/lib/wine/i386-unix/:/opt/wine64/lib/wine/i386-windows/:/opt/wine64/lib/wine/x86_64-unix/:/opt/wine64/lib/wine/x86_64-windows/:/usr/lib/box64-x86_64-linux-gnu/:/lib/x86_64-linux-gnu/:/usr/lib/x86_64-linux-gnu/:/lib/aarch64-linux-gnu/:/usr/lib/aarch64-linux-gnu/
 export WINEPREFIX=~/.wine64
@@ -75,6 +76,7 @@ export DISPLAY=:0
 export GALLIUM_DRIVER=virpipe
 export MESA_GL_VERSION_OVERRIDE=4.6COMPAT
 export MESA_GLES_VERSION_OVERRIDE=3.2
+export BOX86_NOBANNER=1
 export BOX64_PATH=./:./bin/:$HOME/bin:/opt/wine64/bin/
 export BOX64_LD_LIBRARY_PATH=./:./lib/:$HOME/lib/:/opt/wine64/lib/wine/i386-unix/:/opt/wine64/lib/wine/i386-windows/:/opt/wine64/lib/wine/x86_64-unix/:/opt/wine64/lib/wine/x86_64-windows/:/usr/lib/box64-x86_64-linux-gnu/:/lib/x86_64-linux-gnu/:/usr/lib/x86_64-linux-gnu/:/lib/aarch64-linux-gnu/:/usr/lib/aarch64-linux-gnu/
 export WINEPREFIX=~/.wine64
@@ -87,6 +89,7 @@ export DISPLAY=:0
 export GALLIUM_DRIVER=virpipe
 export MESA_GL_VERSION_OVERRIDE=4.6COMPAT
 export MESA_GLES_VERSION_OVERRIDE=3.2
+export BOX86_NOBANNER=1
 export BOX64_PATH=./:./bin/:$HOME/bin:/opt/wine64/bin/
 export BOX64_LD_LIBRARY_PATH=./:./lib/:$HOME/lib/:/opt/wine64/lib/wine/i386-unix/:/opt/wine64/lib/wine/i386-windows/:/opt/wine64/lib/wine/x86_64-unix/:/opt/wine64/lib/wine/x86_64-windows/:/usr/lib/box64-x86_64-linux-gnu/:/lib/x86_64-linux-gnu/:/usr/lib/x86_64-linux-gnu/:/lib/aarch64-linux-gnu/:/usr/lib/aarch64-linux-gnu/
 export WINEPREFIX=~/.wine64
@@ -99,6 +102,7 @@ export DISPLAY=:0
 export GALLIUM_DRIVER=virpipe
 export MESA_GL_VERSION_OVERRIDE=4.6COMPAT
 export MESA_GLES_VERSION_OVERRIDE=3.2
+export BOX86_NOBANNER=1
 export BOX64_PATH=./:./bin/:$HOME/bin:/opt/wine64/bin/
 export BOX64_LD_LIBRARY_PATH=./:./lib/:$HOME/lib/:/opt/wine64/lib/wine/i386-unix/:/opt/wine64/lib/wine/i386-windows/:/opt/wine64/lib/wine/x86_64-unix/:/opt/wine64/lib/wine/x86_64-windows/:/usr/lib/box64-x86_64-linux-gnu/:/lib/x86_64-linux-gnu/:/usr/lib/x86_64-linux-gnu/:/lib/aarch64-linux-gnu/:/usr/lib/aarch64-linux-gnu/
 export WINEPREFIX=~/.wine64
@@ -111,6 +115,7 @@ export DISPLAY=:0
 export GALLIUM_DRIVER=virpipe
 export MESA_GL_VERSION_OVERRIDE=4.6COMPAT
 export MESA_GLES_VERSION_OVERRIDE=3.2
+export BOX86_NOBANNER=1
 export BOX64_PATH=./:./bin/:$HOME/bin:/opt/wine64/bin/
 export BOX64_LD_LIBRARY_PATH=./:./lib/:$HOME/lib/:/opt/wine64/lib/wine/i386-unix/:/opt/wine64/lib/wine/i386-windows/:/opt/wine64/lib/wine/x86_64-unix/:/opt/wine64/lib/wine/x86_64-windows/:/usr/lib/box64-x86_64-linux-gnu/:/lib/x86_64-linux-gnu/:/usr/lib/x86_64-linux-gnu/:/lib/aarch64-linux-gnu/:/usr/lib/aarch64-linux-gnu/
 export WINEPREFIX=~/.wine64
@@ -123,6 +128,7 @@ export DISPLAY=:0
 export GALLIUM_DRIVER=virpipe
 export MESA_GL_VERSION_OVERRIDE=4.6COMPAT
 export MESA_GLES_VERSION_OVERRIDE=3.2
+export BOX86_NOBANNER=1
 export BOX64_PATH=./:./bin/:$HOME/bin:/opt/wine64/bin/
 export BOX64_LD_LIBRARY_PATH=./:./lib/:$HOME/lib/:/opt/wine64/lib/wine/i386-unix/:/opt/wine64/lib/wine/i386-windows/:/opt/wine64/lib/wine/x86_64-unix/:/opt/wine64/lib/wine/x86_64-windows/:/usr/lib/box64-x86_64-linux-gnu/:/lib/x86_64-linux-gnu/:/usr/lib/x86_64-linux-gnu/:/lib/aarch64-linux-gnu/:/usr/lib/aarch64-linux-gnu/
 export WINEPREFIX=~/.wine64
@@ -135,6 +141,7 @@ export DISPLAY=:0
 export GALLIUM_DRIVER=virpipe
 export MESA_GL_VERSION_OVERRIDE=4.6COMPAT
 export MESA_GLES_VERSION_OVERRIDE=3.2
+export BOX86_NOBANNER=1
 export BOX64_PATH=./:./bin/:$HOME/bin:/opt/wine64/bin/
 export BOX64_LD_LIBRARY_PATH=./:./lib/:$HOME/lib/:/opt/wine64/lib/wine/i386-unix/:/opt/wine64/lib/wine/i386-windows/:/opt/wine64/lib/wine/x86_64-unix/:/opt/wine64/lib/wine/x86_64-windows/:/usr/lib/box64-x86_64-linux-gnu/:/lib/x86_64-linux-gnu/:/usr/lib/x86_64-linux-gnu/:/lib/aarch64-linux-gnu/:/usr/lib/aarch64-linux-gnu/
 export WINEPREFIX=~/.wine64
@@ -147,6 +154,7 @@ export DISPLAY=:0
 export GALLIUM_DRIVER=virpipe
 export MESA_GL_VERSION_OVERRIDE=4.6COMPAT
 export MESA_GLES_VERSION_OVERRIDE=3.2
+export BOX86_NOBANNER=1
 export BOX64_PATH=./:./bin/:$HOME/bin:/opt/wine64/bin/
 export BOX64_LD_LIBRARY_PATH=./:./lib/:$HOME/lib/:/opt/wine64/lib/wine/i386-unix/:/opt/wine64/lib/wine/i386-windows/:/opt/wine64/lib/wine/x86_64-unix/:/opt/wine64/lib/wine/x86_64-windows/:/usr/lib/box64-x86_64-linux-gnu/:/lib/x86_64-linux-gnu/:/usr/lib/x86_64-linux-gnu/:/lib/aarch64-linux-gnu/:/usr/lib/aarch64-linux-gnu/
 export WINEPREFIX=~/.wine64
@@ -159,6 +167,7 @@ export DISPLAY=:0
 export GALLIUM_DRIVER=virpipe
 export MESA_GL_VERSION_OVERRIDE=4.6COMPAT
 export MESA_GLES_VERSION_OVERRIDE=3.2
+export BOX86_NOBANNER=1
 export BOX64_PATH=./:./bin/:$HOME/bin:/opt/wine64/bin/
 export BOX64_LD_LIBRARY_PATH=./:./lib/:$HOME/lib/:/opt/wine64/lib/wine/i386-unix/:/opt/wine64/lib/wine/i386-windows/:/opt/wine64/lib/wine/x86_64-unix/:/opt/wine64/lib/wine/x86_64-windows/:/usr/lib/box64-x86_64-linux-gnu/:/lib/x86_64-linux-gnu/:/usr/lib/x86_64-linux-gnu/:/lib/aarch64-linux-gnu/:/usr/lib/aarch64-linux-gnu/
 export WINEPREFIX=~/.wine64
@@ -171,12 +180,27 @@ export DISPLAY=:0
 export GALLIUM_DRIVER=virpipe
 export MESA_GL_VERSION_OVERRIDE=4.6COMPAT
 export MESA_GLES_VERSION_OVERRIDE=3.2
+export BOX86_NOBANNER=1
 export BOX64_PATH=./:./bin/:$HOME/bin:/opt/wine64/bin/
 export BOX64_LD_LIBRARY_PATH=./:./lib/:$HOME/lib/:/opt/wine64/lib/wine/i386-unix/:/opt/wine64/lib/wine/i386-windows/:/opt/wine64/lib/wine/x86_64-unix/:/opt/wine64/lib/wine/x86_64-windows/:/usr/lib/box64-x86_64-linux-gnu/:/lib/x86_64-linux-gnu/:/usr/lib/x86_64-linux-gnu/:/lib/aarch64-linux-gnu/:/usr/lib/aarch64-linux-gnu/
 export WINEPREFIX=~/.wine64
 export WINEARCH=win64
 box64 /opt/wine64/bin/wrc "$@"' > /usr/local/bin/wrc
 sudo chmod 755 /usr/local/bin/wrc
+
+sudo ln -sf /opt/wine64/bin/msidb /usr/local/bin/msidb
+sudo ln -sf /opt/wine64/bin/msiexec /usr/local/bin/msiexec
+sudo ln -sf /opt/wine64/bin/notepad /usr/local/bin/notepad
+sudo ln -sf /opt/wine64/bin/regedit /usr/local/bin/regedit
+sudo ln -sf /opt/wine64/bin/regsvr32 /usr/local/bin/regsvr32
+sudo ln -sf /opt/wine64/bin/wineboot /usr/local/bin/wineboot
+sudo ln -sf /opt/wine64/bin/winecfg /usr/local/bin/winecfg
+sudo ln -sf /opt/wine64/bin/wineconsole /usr/local/bin/wineconsole
+sudo ln -sf /opt/wine64/bin/winedbg /usr/local/bin/winedbg
+sudo ln -sf /opt/wine64/bin/winefile /usr/local/bin/winefile
+sudo ln -sf /opt/wine64/bin/winemaker /usr/local/bin/winemaker
+sudo ln -sf /opt/wine64/bin/winemine /usr/local/bin/winemine
+sudo ln -sf /opt/wine64/bin/winepath /usr/local/bin/winepath
 
 sudo ln -sf /opt/wine64/bin/msidb /usr/local/bin/msidb
 sudo ln -sf /opt/wine64/bin/msiexec /usr/local/bin/msiexec
