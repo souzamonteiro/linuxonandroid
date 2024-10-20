@@ -248,6 +248,14 @@ sudo mv winetricks /usr/local/bin/
 cd ~/Desktop
 
 echo '[Desktop Entry]
+Name=Wine32 Explorer
+Exec=bash -c "wine explorer"
+Icon=system-file-manager
+Type=Application' > ~/Desktop/Wine32.desktop
+chmod 755 ~/Desktop/Wine64.desktop
+sudo cp ~/Desktop/Wine32.desktop /usr/share/applications/
+
+echo '[Desktop Entry]
 Name=Wine64 Explorer
 Exec=bash -c "wine64 explorer"
 Icon=system-file-manager
