@@ -626,7 +626,7 @@ Name=Wine32 Explorer
 Exec=bash -c "wine explorer"
 Icon=system-file-manager
 Type=Application' > ~/Desktop/Wine32.desktop
-chmod 755 ~/Desktop/Wine32.desktop
+chmod 755 ~/Desktop/Wine64.desktop
 sudo cp ~/Desktop/Wine32.desktop /usr/share/applications/
 
 echo '[Desktop Entry]
