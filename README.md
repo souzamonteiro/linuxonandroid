@@ -617,9 +617,17 @@ sudo mv winetricks /usr/local/bin/
 ```
 
 ### Create shortcuts
-Create a shortcut to the Wine File Manager on the Xfce desktop:
+Create a shortcuts to the Wine File Manager on the Xfce desktop:
 ```
 cd ~/Desktop
+
+echo '[Desktop Entry]
+Name=Wine32 Explorer
+Exec=bash -c "wine explorer"
+Icon=system-file-manager
+Type=Application' > ~/Desktop/Wine32.desktop
+chmod 755 ~/Desktop/Wine32.desktop
+sudo cp ~/Desktop/Wine32.desktop /usr/share/applications/
 
 echo '[Desktop Entry]
 Name=Wine64 Explorer
