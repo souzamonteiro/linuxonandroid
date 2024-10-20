@@ -402,8 +402,8 @@ Unpack Wine:
 sudo tar xvf wine-9.20-x86.tar.xz 
 sudo mv wine-9.20-x86 wine32
 
-sudo tar xvf wine-9.7-amd64.tar.xz 
-sudo mv wine-9.7-amd64 wine64
+sudo tar xvf wine-9.20-amd64.tar.xz 
+sudo mv wine-9.20-amd64 wine64
 ```
 
 ### Install DXVK
