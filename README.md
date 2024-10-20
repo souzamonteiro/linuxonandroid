@@ -458,8 +458,9 @@ export MESA_GLES_VERSION_OVERRIDE=3.2
 export BOX86_NOBANNER=1
 export BOX86_PATH=./:./bin/:$HOME/bin:/opt/wine32/bin/
 export BOX86_LD_LIBRARY_PATH=./:./lib/:$HOME/lib/:/opt/wine32/lib/wine/i386-unix/:/opt/wine32/lib/wine/i386-windows/:/usr/lib/box64-x86_64-linux-gnu/:/lib/x86_64-linux-gnu/:/usr/lib/x86_64-linux-gnu/:/lib/aarch64-linux-gnu/:/usr/lib/aarch64-linux-gnu/
-export WINEPREFIX=~/.wine
+export WINEPREFIX=~/.wine32
 export WINEARCH=win32
+box86 /opt/wine32/bin/wineserver
 box86 /opt/wine32/bin/wine "$@"' > /usr/local/bin/wine
 sudo chmod 755 /usr/local/bin/wine
 
