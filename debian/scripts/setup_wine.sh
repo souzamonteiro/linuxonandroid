@@ -8,6 +8,10 @@ sudo dpkg --add-architecture armhf
 # Install some required tools.
 sudo apt install wget gpg -y
 
+# Add box86 Debian repository
+sudo wget https://ryanfortner.github.io/box86-debs/box86.list -O /etc/apt/sources.list.d/box86.list
+wget -qO- https://ryanfortner.github.io/box86-debs/KEY.gpg | sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/box86-debs-archive-keyring.gpg 
+
 # Add box64 Debian repository.
 sudo wget https://ryanfortner.github.io/box64-debs/box64.list -O /etc/apt/sources.list.d/box64.list
 wget -qO- https://ryanfortner.github.io/box64-debs/KEY.gpg | sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/box64-debs-archive-keyring.gpg
@@ -15,7 +19,8 @@ wget -qO- https://ryanfortner.github.io/box64-debs/KEY.gpg | sudo gpg --dearmor 
 # Update apt-get packages list.
 sudo apt update -y
 
-# Install box64.
+# Install box86 and box64.
+sudo apt install box86-android -y
 sudo apt install box64-android -y
 
 # Install Wine.
@@ -32,7 +37,7 @@ sudo apt install libasound2:armhf libc6:armhf libglib2.0-0:armhf libgphoto2-6:ar
         	libgssapi-krb5-2:armhf libkrb5-3:armhf libodbc1:armhf libosmesa6:armhf libsdl2-2.0-0:armhf libv4l-0:armhf \
         	libxcomposite1:armhf libxcursor1:armhf libxfixes3:armhf libxi6:armhf libxinerama1:armhf libxrandr2:armhf \
         	libxrender1:armhf libxxf86vm1:armhf libc6:armhf libcap2-bin:armhf -y
-	
+
 sudo apt install libasound2:arm64 libc6:arm64 libglib2.0-0:arm64 libgphoto2-6:arm64 libgphoto2-port12:arm64 \
 		libgstreamer-plugins-base1.0-0:arm64 libgstreamer1.0-0:arm64 libldap-2.5-0:arm64 libopenal1:arm64 libpcap0.8:arm64 \
 		libpulse0:arm64 libsane1:arm64 libudev1:arm64 libunwind8:arm64 libusb-1.0-0:arm64 libvkd3d1:arm64 libx11-6:arm64 libxext6:arm64 \
@@ -46,11 +51,15 @@ sudo apt install libasound2:arm64 libc6:arm64 libglib2.0-0:arm64 libgphoto2-6:ar
 cd /opt
 
 # Download Wine.
-sudo wget https://github.com/Kron4ek/Wine-Builds/releases/download/9.19/wine-9.19-amd64-wow64.tar.xz
+sudo wget https://github.com/Kron4ek/Wine-Builds/releases/download/9.20/wine-9.20-x86.tar.xz
+sudo wget https://github.com/Kron4ek/Wine-Builds/releases/download/9.20/wine-9.20-amd64.tar.xz
 
 # Unpack Wine.
-sudo tar xvf wine-9.19-amd64-wow64.tar.xz
-sudo mv wine-9.19-amd64-wow64 wine64
+sudo tar xvf wine-9.20-x86.tar.xz 
+sudo mv wine-9.20-x86 wine32
+
+sudo tar xvf wine-9.20-amd64.tar.xz 
+sudo mv wine-9.20-amd64 wine64
 
 # Install DXVK a Vulkan-based translation layer for Direct3D 9/10/11.
 
@@ -65,9 +74,10 @@ tar xvf dxvk-2.3.1.tar.gz
 
 # Create an script to setup DXVK.
 sudo echo '#!/bin/bash
+cp /opt/dxvk-2.3.1/x32/* ~/.wine/drive_c/windows/system32
 cp /opt/dxvk-2.3.1/x32/* ~/.wine64/drive_c/windows/system32
 cp /opt/dxvk-2.3.1/x64/* ~/.wine64/drive_c/windows/syswow64' > /usr/local/bin/setup_dxvk.sh
-sudo chmod 755 /usr/local/bin/setup_dxvk.sh
+sudo chmod +x /usr/local/bin/setup_dxvk.sh
 
 # Create scripts to run Wine under box64.
 sudo echo '#!/bin/bash
