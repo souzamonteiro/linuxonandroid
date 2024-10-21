@@ -51,15 +51,15 @@ sudo apt install libasound2:arm64 libc6:arm64 libglib2.0-0:arm64 libgphoto2-6:ar
 cd /opt
 
 # Download Wine.
-sudo wget https://github.com/Kron4ek/Wine-Builds/releases/download/9.0/wine-9.0-x86.tar.xz
-sudo wget https://github.com/Kron4ek/Wine-Builds/releases/download/9.0/wine-9.0-amd64.tar.xz
+sudo wget https://github.com/Kron4ek/Wine-Builds/releases/download/9.2/wine-9.2-x86.tar.xz
+sudo wget https://github.com/Kron4ek/Wine-Builds/releases/download/9.2/wine-9.2-amd64.tar.xz
 
 # Unpack Wine.
-sudo tar xvf wine-9.0-x86.tar.xz 
-sudo mv wine-9.0-x86 wine32
+sudo tar xvf wine-9.2-x86.tar.xz 
+sudo mv wine-9.2-x86 wine32
 
-sudo tar xvf wine-9.0-amd64.tar.xz 
-sudo mv wine-9.0-amd64 wine64
+sudo tar xvf wine-9.2-amd64.tar.xz 
+sudo mv wine-9.2-amd64 wine64
 
 # Install DXVK a Vulkan-based translation layer for Direct3D 9/10/11.
 
