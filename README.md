@@ -394,16 +394,16 @@ cd /opt
 ```
 Download Wine:
 ```
-sudo wget https://github.com/Kron4ek/Wine-Builds/releases/download/9.0/wine-9.0-x86.tar.xz
-sudo wget https://github.com/Kron4ek/Wine-Builds/releases/download/9.0/wine-9.0-amd64.tar.xz
+sudo wget https://github.com/Kron4ek/Wine-Builds/releases/download/9.2/wine-9.2-x86.tar.xz
+sudo wget https://github.com/Kron4ek/Wine-Builds/releases/download/9.2/wine-9.2-amd64.tar.xz
 ```
 Unpack Wine:
 ```
-sudo tar xvf wine-9.0-x86.tar.xz 
-sudo mv wine-9.0-x86 wine32
+sudo tar xvf wine-9.2-x86.tar.xz 
+sudo mv wine-9.2-x86 wine32
 
-sudo tar xvf wine-9.0-amd64.tar.xz 
-sudo mv wine-9.0-amd64 wine64
+sudo tar xvf wine-9.2-amd64.tar.xz 
+sudo mv wine-9.2-amd64 wine64
 ```
 
 ### Install DXVK
