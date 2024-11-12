@@ -61,6 +61,11 @@ sudo mv wine-9.2-x86 wine32
 sudo tar xvf wine-9.2-amd64.tar.xz 
 sudo mv wine-9.2-amd64 wine64
 
+# Install Wine icon.
+sudo mkdir images
+cd images
+sudo wget https://github.com/Kron4ek/Wine-Builds/releases/download/9.2/wine-9.2-x86.tar.xz
+
 # Install DXVK a Vulkan-based translation layer for Direct3D 9/10/11.
 
 # Install DXVK dependencies.
