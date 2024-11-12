@@ -62,9 +62,10 @@ sudo tar xvf wine-9.2-amd64.tar.xz
 sudo mv wine-9.2-amd64 wine64
 
 # Install Wine icon.
-sudo mkdir images
-cd images
-sudo wget https://github.com/Kron4ek/Wine-Builds/releases/download/9.2/wine-9.2-x86.tar.xz
+sudo mkdir -p wine/images
+cd wine/images
+sudo wget https://raw.githubusercontent.com/souzamonteiro/linuxonandroid/refs/heads/main/debian/images/wine.png
+cd ../..
 
 # Install DXVK a Vulkan-based translation layer for Direct3D 9/10/11.
 
@@ -255,7 +256,7 @@ cd ~/Desktop
 echo '[Desktop Entry]
 Name=Wine32 Explorer
 Exec=bash -c "wine explorer"
-Icon=system-file-manager
+Icon=/opt/wine/images/wine.png
 Type=Application' > ~/Desktop/Wine32.desktop
 chmod 755 ~/Desktop/Wine32.desktop
 sudo cp ~/Desktop/Wine32.desktop /usr/share/applications/
@@ -263,7 +264,7 @@ sudo cp ~/Desktop/Wine32.desktop /usr/share/applications/
 echo '[Desktop Entry]
 Name=Wine64 Explorer
 Exec=bash -c "wine64 explorer"
-Icon=system-file-manager
+Icon=/opt/wine/images/wine.png
 Type=Application' > ~/Desktop/Wine64.desktop
 chmod 755 ~/Desktop/Wine64.desktop
 sudo cp ~/Desktop/Wine64.desktop /usr/share/applications/
