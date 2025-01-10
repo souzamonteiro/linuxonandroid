@@ -231,20 +231,6 @@ sudo ln -sf /opt/wine64/bin/winemaker /usr/local/bin/winemaker
 sudo ln -sf /opt/wine64/bin/winemine /usr/local/bin/winemine
 sudo ln -sf /opt/wine64/bin/winepath /usr/local/bin/winepath
 
-sudo ln -sf /opt/wine64/bin/msidb /usr/local/bin/msidb
-sudo ln -sf /opt/wine64/bin/msiexec /usr/local/bin/msiexec
-sudo ln -sf /opt/wine64/bin/notepad /usr/local/bin/notepad
-sudo ln -sf /opt/wine64/bin/regedit /usr/local/bin/regedit
-sudo ln -sf /opt/wine64/bin/regsvr32 /usr/local/bin/regsvr32
-sudo ln -sf /opt/wine64/bin/wineboot /usr/local/bin/wineboot
-sudo ln -sf /opt/wine64/bin/winecfg /usr/local/bin/winecfg
-sudo ln -sf /opt/wine64/bin/wineconsole /usr/local/bin/wineconsole
-sudo ln -sf /opt/wine64/bin/winedbg /usr/local/bin/winedbg
-sudo ln -sf /opt/wine64/bin/winefile /usr/local/bin/winefile
-sudo ln -sf /opt/wine64/bin/winemaker /usr/local/bin/winemaker
-sudo ln -sf /opt/wine64/bin/winemine /usr/local/bin/winemine
-sudo ln -sf /opt/wine64/bin/winepath /usr/local/bin/winepath
-
 # Install Winetricks.
 wget https://raw.githubusercontent.com/Winetricks/winetricks/master/src/winetricks
 chmod 755 winetricks
