@@ -24,4 +24,4 @@ pkg install xfce4 xfce4-goodies -y
 pkg install pulseaudio -y
 
 # Install VirGL and Angle.
-pkg install angle-android virglrenderer-android
+pkg install angle-android virglrenderer-android -y
