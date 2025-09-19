@@ -81,7 +81,7 @@ pkg install pulseaudio -y
 ### Setup hardware acceleration
 Install VirGL and Angle:
 ```
-pkg install angle-android virglrenderer-android
+pkg install angle-android virglrenderer-android -y
 ```
 
 ## Install and setup Debian
