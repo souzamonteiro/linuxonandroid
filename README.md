@@ -66,6 +66,12 @@ pkg install x11-repo -y
 pkg install termux-x11-nightly -y
 ```
 
+### Install Xfce4
+Install X11 for Android:
+```
+pkg install xfce4 xfce4-goodies -y
+```
+
 ### Install PulseAudio
 Install audio support:
 ```
