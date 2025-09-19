@@ -17,6 +17,9 @@ pkg install proot-distro -y
 pkg install x11-repo -y
 pkg install termux-x11-nightly -y
 
+# Install Xfce4.
+pkg install xfce4 xfce4-goodies -y
+
 # Install audio support.
 pkg install pulseaudio -y
 
