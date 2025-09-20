@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Terminal=false
+Name=Visual Studio Code
+Icon=/home/user/VSCode-linux-arm64/resources/app/resources/linux/code.png
+Exec=/home/user/VSCode-linux-arm64/code --no-sandbox
+Categories=Development;IDE;
+Comment=
+Path=
+StartupNotify=false
